@@ -19,24 +19,29 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              myText,
-              textScaleFactor: 2.0,
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  myText,
+                  textScaleFactor: 2.0,
+                ),
+                SizedBox(
+                  height: 50.0,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    myText = "Hindustani";
+                    print(myText);
+                    setState(() {});
+                  },
+                  child: Text("press me!"),
+                  color: Colors.blue,
+                )
+              ],
             ),
-            SizedBox(
-              height: 50.0,
-            ),
-            FlatButton(
-              onPressed: () {
-                myText = "Hindustani";
-                print(myText);
-                setState(() {});
-              },
-              child: Text("press me!"),
-              color: Colors.blue,
-            )
           ],
         ),
       ),
